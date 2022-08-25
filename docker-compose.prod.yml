@@ -1,0 +1,28 @@
+version: "3.8"
+services:
+  accountingFront:
+    container_name: accounting-frontend
+    image: handy195/wikan:accFrontend
+    restart: always
+    networks:
+      - accounting-netos
+    build:
+      context: ./client/
+      dockerfile: Dockerfile
+      target: production
+    ports:
+      - "80:80"
+  accountingBack:
+    container_name: accounting-backend
+    image: handy195/wikan:accBackend
+    restart: always
+    networks:
+      - accounting-netos
+    build:
+      context: ./server/
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+networks:
+  accounting-netos:
+    external: true

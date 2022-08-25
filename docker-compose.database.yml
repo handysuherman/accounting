@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  accountingDatabase:
+    container_name: accounting-database
+    restart: always
+    image: mongo:4.2
+    networks:
+      - accounting-netos
+    ports:
+      - "27018:27017"
+networks:
+  accounting-netos:
+    external: true
