@@ -3,7 +3,7 @@ services:
   accountingDatabase:
     container_name: accounting-database
     restart: always
-    image: mongo:4.2
+    image: mongo
     networks:
       - accounting-netos
     ports:

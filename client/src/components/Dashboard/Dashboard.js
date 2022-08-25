@@ -114,7 +114,7 @@ const Dashboard = () => {
           >
             <div>
               <p>{toCommas(totalPaid)}</p>
-              <h2 style={{ color: "white" }}>Payment Received</h2>
+              <h2 style={{ color: "white" }}>Pembayaran Di Terima</h2>
             </div>
             <div>
               <Check />
@@ -124,7 +124,7 @@ const Dashboard = () => {
           <li className={styles.listItem}>
             <div>
               <p>{toCommas(totalAmount - totalPaid)}</p>
-              <h2>Pending Amount</h2>
+              <h2>Pembayaran yang Belum di bayar</h2>
             </div>
             <div>
               <Pie />
@@ -134,7 +134,7 @@ const Dashboard = () => {
           <li className={styles.listItem}>
             <div>
               <p>{toCommas(totalAmount)}</p>
-              <h2>Total Amount</h2>
+              <h2>Total Masukan</h2>
             </div>
             <div>
               <Bag />
@@ -144,7 +144,7 @@ const Dashboard = () => {
           <li className={styles.listItem}>
             <div>
               <p>{invoices.length}</p>
-              <h2>Total Invoices</h2>
+              <h2>Jumlah Invoices</h2>
             </div>
             <div>
               <Card />
@@ -157,7 +157,7 @@ const Dashboard = () => {
           >
             <div>
               <p>{paid.length}</p>
-              <h2 style={{ color: "white" }}>Paid Invoices</h2>
+              <h2 style={{ color: "white" }}>Invoice Lunas</h2>
             </div>
             <div>
               <Check />
@@ -167,7 +167,7 @@ const Dashboard = () => {
           <li className={styles.listItem}>
             <div>
               <p>{partial.length}</p>
-              <h2>Partially Paid Invoices</h2>
+              <h2>Invoice Angsuran</h2>
             </div>
             <div>
               <Pie />
@@ -177,7 +177,7 @@ const Dashboard = () => {
           <li className={styles.listItem}>
             <div>
               <p>{unpaidInvoice.length}</p>
-              <h2>Unpaid Invoices</h2>
+              <h2>Pending Invoice</h2>
             </div>
             <div>
               <Frown />
@@ -187,7 +187,7 @@ const Dashboard = () => {
           <li className={styles.listItem}>
             <div>
               <p>{overDue.length}</p>
-              <h2>Overdue</h2>
+              <h2>Invoice Jatuh Tempo</h2>
             </div>
             <div>
               <Clock />
@@ -205,7 +205,7 @@ const Dashboard = () => {
       <section>
         <h1 style={{ textAlign: "center", padding: "30px" }}>
           {paymentHistory.length
-            ? "Recent Payments"
+            ? "Pembayaran Terbaru"
             : "No payment received yet"}
         </h1>
         <div>
@@ -215,10 +215,10 @@ const Dashboard = () => {
                 {paymentHistory.length !== 0 && (
                   <tr>
                     <th style={{ padding: "15px" }}></th>
-                    <th style={{ padding: "15px" }}>Paid By</th>
-                    <th style={{ padding: "15px" }}>Date Paid</th>
-                    <th style={{ padding: "15px" }}>Amount Paid</th>
-                    <th style={{ padding: "15px" }}>Payment Method</th>
+                    <th style={{ padding: "15px" }}>Dibayar Oleh</th>
+                    <th style={{ padding: "15px" }}>Tanggal Pembayaran</th>
+                    <th style={{ padding: "15px" }}>Jumlah Pembayaran</th>
+                    <th style={{ padding: "15px" }}>Metode Pembayaran</th>
                     <th style={{ padding: "15px" }}>Note</th>
                   </tr>
                 )}
